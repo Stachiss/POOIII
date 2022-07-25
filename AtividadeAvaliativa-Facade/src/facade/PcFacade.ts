@@ -1,6 +1,9 @@
 import VideoCardType from "../videoCard/VideoCardType"
 import AudioCardType from "../audioCard/AudioCardType"
 import ProcessorType from "../processor/ProcessorType"
+import VideoCardType from "../videoCard/VideoCardType"
+import AudioCardType from "../audioCard/AudioCardType"
+import ProcessorType from "../processor/ProcessorType"
 import MemorieType from "../memories/MemorieType"
 import SourceType from "../source/SourceType"
 import RamType from "../memories/RamType"
@@ -31,6 +34,15 @@ export default class PcFacade{
         this._memorie2.setRam();
         this._source.setSource();
         console.log("\n******** Criação Completa **********");
-       
+    }
+
+
+    public createPc(){
+        console.log("******** Criando Computador **********\n");
+        this._videoCard.setVideoCard();
+        this._processor.setProcessor();
+        this._memorie1.setMemorie();
+        this._source.setSource();
+        console.log("\n******** Criação Completa **********");
     }
 }
